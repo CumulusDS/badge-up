@@ -99,9 +99,9 @@ function sectionsToData(sections) {
 
 module.exports = function badge_v2(sections, callback) {
     var raw = TEMPLATE(sectionsToData(sections));
-    svgo.optimize(raw, function(optimized) {
+    svgo.optimize(raw).then(function(optimized) {
         callback(undefined, optimized.data);
-    });
+    }).catch(callback);
 };
 
 

@@ -1,7 +1,7 @@
 {
-  "name": "badge-up",
+  "name": "@rpl/badge-up",
   "version": "2.2.0",
-  "description": "A module that produces hot badges without the need of Cairo",
+  "description": "A module that produces hot badges without the need of Cairo (forked from the original badge-up package to update vulnerable npm deps)",
   "main": "index.js",
   "scripts": {
     "lint": "jshint *.js test/*.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yahoo/badge-up.git"
+    "url": "git@github.com:rpl/badge-up.git"
   },
   "bugs": "https://github.com/yahoo/badge-up/issues",
   "keywords": [
@@ -29,14 +29,14 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "coveralls": "^2.11.15",
-    "jenkins-mocha": "^4.1.0",
+    "coveralls": "^3.0.2",
+    "jenkins-mocha": "^6.0.0",
     "jshint": "^2.9.2",
     "sinon": "^1.17.7"
   },
   "dependencies": {
     "css-color-names": "~0.0.3",
     "dot": "^1.1.1",
-    "svgo": "^0.7.2"
+    "svgo": "^1.1.1"
   }
 }

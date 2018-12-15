@@ -1,3 +1,12 @@
+# This is a forked version of the original [badge-up npm package](https://www.npmjs.com/package/badge-up)
+
+The only changes applied to the original npm package are:
+
+- updated npm dependencies (to fix some known vulnerabilities detected by npm audit)
+- adapt sources to the changes introduced in the new `svgo` library
+
+------
+
 # badge-up
 
 [![npm](https://img.shields.io/npm/v/badge-up.svg?maxAge=2592000)](https://www.npmjs.com/package/badge-up)

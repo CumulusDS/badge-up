@@ -38,9 +38,9 @@ module.exports = function badge (field1, field2, color, callback) {
         };
 
     // Run the SVG through SVGO.
-    svgo.optimize(template(data), function (object) {
+    svgo.optimize(template(data)).then(function (object) {
         callback(null, object.data);
-    });
+    }).catch(callback);
 };
 
 /**
