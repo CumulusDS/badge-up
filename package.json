@@ -1,7 +1,7 @@
 {
-  "name": "badge-up",
+  "name": "@rpl/badge-up",
   "version": "2.3.0",
-  "description": "A module that produces hot badges without the need of Cairo",
+  "description": "A module that produces hot badges without the need of Cairo (forked from the original badge-up package to update vulnerable npm deps)",
   "main": "index.js",
   "nyc": {
     "reporter": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yahoo/badge-up.git"
+    "url": "git@github.com:rpl/badge-up.git"
   },
   "homepage": "https://github.com/yahoo/badge-up",
   "engines": {
