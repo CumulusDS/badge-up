@@ -5,8 +5,7 @@ Copyrights licensed under the New BSD License. See the accompanying LICENSE file
 
 var fs = require('fs'),
     path = require('path'),
-    SVGO = require('svgo'),
-    svgo = new SVGO(),
+    svgo = require('svgo'),
     dot = require('dot'),
     template = dot.template(fs.readFileSync(path.join(__dirname, 'templates', 'basic.svg'), 'utf-8')),
     v2 = require('./v2'),
@@ -37,10 +36,19 @@ module.exports = function badge (field1, field2, color, callback) {
         };
 
     // Run the SVG through SVGO.
-    return svgo.optimize(template(data)).then(function (object) {
-        if (callback) callback(null, object.data);
-        return object.data;
+    const raw = utils.fixupNumericEntities(template(data));
+    const optimized = svgo.optimize(raw, {
+        plugins: ['preset-default'],
     });
+    if (optimized.modernError) {
+      if (callback) { 
+          callback(optimized.modernError, undefined); 
+          return;
+      }
+      return Promise.reject(optimized.modernError);
+    }
+    if (callback) callback(null, optimized.data);
+    return Promise.resolve(optimized.data);
 };
 
 /**
