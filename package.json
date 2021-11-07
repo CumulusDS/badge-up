@@ -1,5 +1,5 @@
 {
-  "name": "badge-up",
+  "name": "@rpl/badge-up",
   "version": "3.0.0",
   "description": "A module that produces hot badges without the need of Cairo",
   "main": "index.js",
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yahoo/badge-up.git"
+    "url": "git@github.com:rpl/badge-up.git"
   },
-  "homepage": "https://github.com/yahoo/badge-up",
+  "homepage": "https://github.com/rpl/badge-up",
   "engines": {
     "node": ">=10.0.0"
   },
-  "bugs": "https://github.com/yahoo/badge-up/issues",
+  "bugs": "https://github.com/rpl/badge-up/issues",
   "keywords": [
     "badge",
     "yahoo"
