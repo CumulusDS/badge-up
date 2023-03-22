@@ -8,7 +8,7 @@ var colors = require('css-color-names'),
     fs = require('fs'),
     path = require('path'),
     utils = require('./utils'),
-    {optimize, extendDefaultPlugins} = require('svgo'),
+    {optimize} = require('svgo'),
     TEMPLATE = dot.template(fs.readFileSync(path.join(__dirname, 'templates', 'v2.svg'), 'utf-8')),
     COLOR_REGEX             = /^[0-9a-f]{6}$/i,
     STROKE_REGEX            = /^s\{(.+?)\}$/i,
@@ -102,10 +102,14 @@ module.exports = async function badge_v2(sections, callback) {
         .replace(/&#(x26|38);/gi, '&amp;');
 
     const optimized = optimize(raw, {
-        plugins: extendDefaultPlugins([{
-            name: 'sortDefsChildren',
-            active: false
-        }])
+        plugins: [{
+            name: 'preset-default',
+            params: {
+                overrides: {
+                    sortDefsChildren: false
+                }
+            }
+        }]
     });
     if (callback) callback(undefined, optimized.data);
     return optimized.data;
