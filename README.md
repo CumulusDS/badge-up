@@ -12,7 +12,6 @@ The only changes applied to the original npm package are:
 [![npm](https://img.shields.io/npm/v/badge-up.svg?maxAge=2592000)](https://www.npmjs.com/package/badge-up)
 [![downloads](https://img.shields.io/npm/dt/badge-up.svg?maxAge=2592000)](https://www.npmjs.com/package/badge-up)
 [![build](https://cd.screwdriver.cd/pipelines/62/badge?maxAge=2592000)](https://cd.screwdriver.cd/pipelines/62)
-[![coverage](https://coveralls.io/repos/github/yahoo/badge-up/badge.svg)](https://coveralls.io/github/yahoo/badge-up)
 
 This is a simple library that generates SVG badges without Cairo.
 
