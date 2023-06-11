@@ -18,13 +18,13 @@ This is a simple library that generates SVG badges without Cairo.
 
 ## Install
 
-`npm install badge-up`
+`npm install @cumulusds/badge-up`
 
 
 ## V1 Usage
 
 ```js
-const badge = require('badge-up');
+const badge = require('@cumulusds/badge-up');
 badge('batman', 'component', badge.colors.green, function (error, svg) {
     // some callback
 });
@@ -38,7 +38,7 @@ found in `badge.colors`.
 You can alternatively use the returned `Promise`:
 
 ```js
-const badge = require('badge-up');
+const badge = require('@cumulusds/badge-up');
 (async () => {
 try {
     const svg = await badge('batman', 'component', badge.colors.green);
@@ -69,7 +69,7 @@ The default color for the first section is `696969` and `d3d3d3` for subsequent 
 Any section can have mulitple lines by putting newlines in its text.
 
 ```js
-const badge = require('badge-up');
+const badge = require('@cumulusds/badge-up');
 const sections = [
     'foo/far;fun',
     [ 'bar\nbaz', 'orange'],
@@ -86,7 +86,7 @@ Produces: ![example](https://cdn.rawgit.com/yahoo/badge-up/master/test/testData/
 You can also use the returned `Promise`:
 
 ```js
-const badge = require('badge-up');
+const badge = require('@cumulusds/badge-up');
 const sections = [
     'foo/far;fun',
     [ 'bar\nbaz', 'orange'],
