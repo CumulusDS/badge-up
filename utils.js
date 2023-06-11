@@ -14,7 +14,18 @@ var LETTER_WIDTH = [
         8,8,8,8,8,7,7,7,6,6,6,6,6,6,9,5,6,6,6,6,3,3,3,3,6,6,6,6,6,6,6,6,7,6,6,6,
         6,5,6
     ];
-
+/**
+ * Replace numeric entity codes with the related entity code name
+ * for the "<" and "&" characters. Prevent svgo "Unencoded ..." errors,
+ * see https://github.com/svg/svgo/issues/1498.
+ * @method replaceNumericEntities
+ * @param  {String}  string Input string
+ * @return {String}         Fixed string
+ */
+module.exports.fixupNumericEntities = function replaceNumericEntitities(string) {
+    return string.replace(/&#(x3c|60);/gi, '&lt;')
+                 .replace(/&#(x26|38);/gi, '&amp;');
+} 
 
 /**
  * Escape the string so that it doesn't break xml
