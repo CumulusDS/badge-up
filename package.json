@@ -1,6 +1,6 @@
 {
   "name": "@cumulusds/badge-up",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A module that produces hot badges without the need of Cairo (forked from the original badge-up package to update vulnerable npm deps)",
   "main": "index.js",
   "nyc": {
