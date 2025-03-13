@@ -10,6 +10,7 @@
     ]
   },
   "scripts": {
+    "build": "echo 'no build'",
     "git:commit": "git add package.json .yarn/versions && git commit -m v${npm_package_version}",
     "git:push": "git push --follow-tags",
     "git:tag": "git tag -a v${npm_package_version} -m v${npm_package_version}",
